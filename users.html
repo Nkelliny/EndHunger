@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+ <head>
+ 	<title>CECC</title>
+ 	<link rel="stylesheet" href="css.css">
+
+ </head>
+ <body>
+ 	<img src="http://www.andrewhuffer.com.au/wp-content/uploads/2010/12/problem_solving3.jpg"align="center" style="width: 900px; height: 600px;">
+ </body>	
+<?php
+	include ('account.php');
+
+	
+	$sql = "SELECT * FROM posts";
+	
+	$result = mysql_query($sql);
+	
+	if ($result){
+		
+		
+		echo '<table border="1">';
+		
+		 while($row = mysql_fetch_assoc($result)){
+		 	
+			echo '<tr><td style= "text-align: center">' . $row['post_title'] . '</td>';
+		    echo '<tr><td>' . $row['post_content'] . '</td>';
+		
+		
+	    } 
+	}
+	else{
+		
+		print "Something is wrong with the sql";
+		    echo 'MySQL Error: ' . mysql_error();
+		
+	}
+
+
+
+?>
+</html>
