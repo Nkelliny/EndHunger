@@ -12,7 +12,7 @@
  * @since         1.3.0
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-namespace TestApp\View\Helper;
+namespace EndHunger\View\Helper;
 
 use Cake\View\Helper;
 
