@@ -1,6 +1,5 @@
 <?php
 
-$this-extend('/views/admin_edit');
 
 $this-Html
 -addCrumb($this-Html-icon('home'), '/admin')
